@@ -246,6 +246,8 @@ body{
 
   .dud {
     color: #757575;
+    display: inline-block;
+  width: 1ch;
   }
 
   .video-cnt{

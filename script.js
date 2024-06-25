@@ -37,7 +37,8 @@ document.addEventListener('DOMContentLoaded',function(){
 
     
    
-    const target = document.querySelector('#discoverParagraph');
+    const target = document.querySelector('#cards-wrapper');
+    const discoverText = document.querySelector('#discoverParagraph');
 
     function handleIntersection(entries) {
         entries.map((entry) => {
@@ -52,6 +53,7 @@ document.addEventListener('DOMContentLoaded',function(){
       const observer = new IntersectionObserver(handleIntersection);
 
       observer.observe(target);
+      observer.observe(discoverText);
 
       document.querySelectorAll('.flip-card-inner').forEach(card => {
         card.addEventListener('touchstart', function() {

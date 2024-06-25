@@ -1,0 +1,58 @@
+:root{
+    --black: #292929;
+    --dark-gray: #606569;
+    --warm-yellow: #eec201;
+    --lemon-yellow: #fae12c;
+    --light-gray:#969a9d;
+}
+
+.hero-section .first-section-text{
+  text-align: center;
+  font-size: 2rem;
+  color: var(--warm-yellow);
+  width: 100%;
+  position: relative;
+}
+
+#hook{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+
+  .dud {
+    color: #757575;
+    display: inline-block;
+  width: 1ch;
+  }
+
+  .video-cnt{
+    width: 100%;
+    position: relative;
+  }
+
+
+  video{
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+
+  .video-cnt::after{
+    content: '';
+    background:linear-gradient(to right, var(--dark-gray), var(--black)) ;
+    opacity: .5;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    left: 0;
+  }
+
+
+  

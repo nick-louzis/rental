@@ -35,21 +35,7 @@ document.addEventListener('DOMContentLoaded',function(){
      })
 
 
-    const cards = document.querySelectorAll('.card');
-
-    cards.forEach((card)=>{
-        card.addEventListener('click',function(e){
-            let contectCard= e.target.nextElementSibling;
-            console.log(contectCard.classlist);
-            contectCard.classList.add('.card-content-animation');
-            
-            setTimeout(function(){
-                contectCard.style.visibility = "visible";
     
-            },1000)
-        })
-    })
-   
    
     const target = document.querySelector('#discoverParagraph');
 
@@ -66,4 +52,13 @@ document.addEventListener('DOMContentLoaded',function(){
       const observer = new IntersectionObserver(handleIntersection);
 
       observer.observe(target);
+
+      document.querySelectorAll('.flip-card-inner').forEach(card => {
+        card.addEventListener('touchstart', function() {
+            this.style.transform = 'rotateY(180deg)';
+        });
+        card.addEventListener('touchend', function() {
+            this.style.transform = '';
+        });
+    });
 })

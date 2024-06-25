@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="video.css">
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="cards.css">
-    
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="booking.css">
 </head>
 <body>
     <custom-header></custom-header>
@@ -24,44 +25,121 @@
             <h2 id="hook"></h2>
         </div>
 
+
+
+        <div class="booking-form-container">
+          <h2>Book Your Moto</h2>
+          <form class="booking-form">
+              <div class="form-group">
+                  <label for="moto-select">Select a Moto:</label>
+                  <select id="moto-select" name="moto">
+                      <option value="ATV-250cc">ATV-250cc</option>
+                      <option value="Cforce-450cc">Cforce-450cc</option>
+                      <option value="ATV-300cc">ATV-300cc</option>
+                      
+                  </select>
+              </div>
+  
+              <div class="form-group">
+                  <label for="start-date">Start Date:</label>
+                  <input type="date" id="start-date" name="start-date" required>
+              </div>
+  
+              <div class="form-group">
+                  <label for="end-date">End Date:</label>
+                  <input type="date" id="end-date" name="end-date" required>
+              </div>
+  
+              <div class="form-group">
+                  <label for="name">Your Name:</label>
+                  <input type="text" id="name" name="name" required>
+              </div>
+  
+              <div class="form-group">
+                  <label for="email">Your Email:</label>
+                  <input type="email" id="email" name="email" required>
+              </div>
+  
+              <div class="form-group">
+                  <label for="phone">Your Phone:</label>
+                  <input type="tel" id="phone" name="phone" required>
+              </div>
+  
+              <div class="form-group full-width">
+                  <button type="submit" class="book-now">Book Now</button>
+              </div>
+          </form>
+      </div>
+
+
+
         <div id="cards-wrapper">
             
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img src="assets/ATV-250cc.avif" alt="Avatar" style="width:300px;height:300px; object-fit: cover;">
-                  </div>
-                  <div class="flip-card-back">
-                    <p>ATV-250cc</p>
-                    <button class="moto-info">See Details</button>
-                  </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="assets/ATV-250cc.avif" alt="ATV-250cc" style="width:100%;height:90%; object-fit: cover;">
+                    <h3>ATV-250cc</h3>
                 </div>
-              </div>
+                <div class="flip-card-back">
+                    <h3>ATV-250cc</h3>
+                    <p>The ATV-250cc is perfect for off-road adventures, offering great power and handling.</p>
+                    <ul>
+                        <li>Engine: 250cc</li>
+                        <li>Transmission: Automatic</li>
+                        <li>Fuel: Gasoline</li>
+                        <li>Top Speed: 70 mph</li>
+                    </ul>
+                    <p>Price: $50/day</p>
+                    <button class="moto-info">See Details</button>
+                </div>
+            </div>
+        </div>
+        
 
 
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img src="assets/Cforce-450cc.avif" alt="Avatar" style="width:300px;height:300px; object-fit: cover;">
-                  </div>
-                  <div class="flip-card-back">
-                    <p>Cforce-450cc</p>
-                    <button class="moto-info">See Details</button>
-                  </div>
-                </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+              <div class="flip-card-front">
+                  <img src="assets/Cforce-450cc.avif" alt="Cforce-450cc" style="width:100%;height:90%; object-fit: cover;">
+                  <h3>Cforce-450cc</h3>
               </div>
-           
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img src="assets/ATV-300cc.avif"  alt="Avatar" style="width:300px;height:300px; object-fit: cover;">
-                  </div>
-                  <div class="flip-card-back">
-                    <p>ATV-300cc</p>
-                    <button class="moto-info">See Details</button>
-                  </div>
-                </div>
+              <div class="flip-card-back">
+                  <h3>Cforce-450cc</h3>
+                  <p>The Cforce-450cc is a versatile ATV, perfect for both recreational and utility purposes.</p>
+                  <ul>
+                      <li>Engine: 450cc</li>
+                      <li>Transmission: Automatic</li>
+                      <li>Fuel: Gasoline</li>
+                      <li>Top Speed: 60 mph</li>
+                  </ul>
+                  <p>Price: $60/day</p>
+                  <button class="moto-info">See Details</button>
               </div>
+          </div>
+      </div>
+      
+      <div class="flip-card">
+          <div class="flip-card-inner">
+              <div class="flip-card-front">
+                  <img src="assets/ATV-300cc.avif" alt="ATV-300cc" style="width:100%;height:90%; object-fit: cover;">
+                  <h3>ATV-300cc</h3>
+                </div>
+              <div class="flip-card-back">
+                  <h3>ATV-300cc</h3>
+                  <p>The ATV-300cc offers a great balance of power and agility, ideal for off-road fun.</p>
+                  <ul>
+                      <li>Engine: 300cc</li>
+                      <li>Transmission: Manual</li>
+                      <li>Fuel: Gasoline</li>
+                      <li>Top Speed: 55 mph</li>
+                  </ul>
+                  <p>Price: $45/day</p>
+                  <button class="moto-info">See Details</button>
+              </div>
+          </div>
+      </div>
+      
         </div>
 
 
@@ -69,6 +147,41 @@
             <p id="discoverParagraph" >Discover our diverse selection of top-quality bikes and cars, meticulously maintained to ensure a smooth and enjoyable ride every time. From sporty bikes to luxurious cars, we have something for everyone.</p>
         </div>
     </section>
+
+
+    <custom-footer>
+      <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@motobikerentals.com</p>
+                <p>Phone: +123 456 7890</p>
+                <p>Address: 123 Bike Lane, Moto City, MC 56789</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Bikes</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MotoBike Rentals. All rights reserved.</p>
+        </div>
+    </footer>
+    </custom-footer>
 
     <script src="script.js"></script>
     <script src="scramble.js"></script>

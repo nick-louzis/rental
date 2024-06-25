@@ -1,0 +1,125 @@
+:root {
+    --black: #292929;
+    --dark-gray: #606569;
+    --warm-yellow: #eec201;
+    --lemon-yellow: #fae12c;
+    --light-gray: #969a9d;
+    --white: #ffffff;
+    --light-bg: #f7f7f7;
+}
+
+
+
+
+.booking-form-container {
+    background-color: var(--white);
+    color: var(--black);
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.booking-form-container h2 {
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.booking-form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group.full-width {
+    grid-column: span 3;
+}
+
+.booking-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--dark-gray);
+}
+
+.booking-form input,
+.booking-form select {
+    padding: 10px;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    background-color: var(--light-bg);
+    color: var(--black);
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 10px;
+}
+
+.booking-form select{
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black"><polygon points="0,0 20,0 10,10"/></svg>');
+}
+
+
+
+.booking-form input[type="date"] {
+    color: var(--black);
+}
+
+.booking-form button {
+    background-color: var(--warm-yellow);
+    border: none;
+    color: var(--black);
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.booking-form button:hover {
+    background-color: var(--lemon-yellow);
+    transform: translateY(-2px);
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+    outline: none;
+    border-color: var(--warm-yellow);
+}
+
+@media (max-width: 768px) {
+    .booking-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-group.full-width {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .booking-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+}

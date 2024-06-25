@@ -34,6 +34,7 @@
     width: 300px;
     height: 300px;
     perspective: 1000px;
+    margin: 10px 20px;
   }
   
   .flip-card-inner {
@@ -64,21 +65,31 @@
   }
   
   .flip-card-back {
-    background-color: #2980b9;
-    color: white;
+    background-color: var(--dark-gray);
+    color: var(--warm-yellow);
     transform: rotateY(180deg);
+    text-align: left;
+    padding: 5px 15px;
+    
   }
 
-/* #cards-wrapper .card:nth-child(2){
-    padding-top: 20px;
-} */
+  .moto-info {
+    background-color: var(--warm-yellow);
+    border: none;
+    color: var(--black);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-
-/* #cards-wrapper .card:nth-child(1):hover,
-#cards-wrapper .card:nth-child(2):hover,
-#cards-wrapper .card:nth-child(3):hover{
-    transform: translateY(-10%);
-} */
+.moto-info:hover {
+  background-color: var(--lemon-yellow);
+}
 
 
 #cards-wrapper .card:nth-child(3){

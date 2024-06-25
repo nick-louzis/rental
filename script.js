@@ -34,4 +34,36 @@ document.addEventListener('DOMContentLoaded',function(){
         navlinks.style.left='0px';
      })
 
+
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach((card)=>{
+        card.addEventListener('click',function(e){
+            let contectCard= e.target.nextElementSibling;
+            console.log(contectCard.classlist);
+            contectCard.classList.add('.card-content-animation');
+            
+            setTimeout(function(){
+                contectCard.style.visibility = "visible";
+    
+            },1000)
+        })
+    })
+   
+   
+    const target = document.querySelector('#discoverParagraph');
+
+    function handleIntersection(entries) {
+        entries.map((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+          } else {
+            entry.target.classList.remove('visible')
+          }
+        });
+      }
+
+      const observer = new IntersectionObserver(handleIntersection);
+
+      observer.observe(target);
 })

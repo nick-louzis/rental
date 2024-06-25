@@ -59,15 +59,20 @@ const phrases = [
   'Find Your Perfect Ride'
 ]
 
-const target = document.querySelector('#hook');
-const fx = new TextScramble(target)
 
-let counter = 0
-const next = () => {
-  fx.setText(phrases[counter]).then(() => {
-    setTimeout(next, 800)
-  })
-  counter = (counter + 1) % phrases.length
-}
+document.addEventListener('DOMContentLoaded', function(){
+  const target = document.querySelector('#hook');
+  const fx = new TextScramble(target)
+  
+  let counter = 0
+  const next = () => {
+    fx.setText(phrases[counter]).then(() => {
+      setTimeout(next, 800)
+    })
+    counter = (counter + 1) % phrases.length
+  }
+  
+  next()
+})
 
-next()
+

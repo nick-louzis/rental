@@ -45,6 +45,7 @@ body{
     height: 100%;
     display:flex ;
     align-items: center;
+    transition: all .3s;
 }
 
 #nav ul{
@@ -67,6 +68,21 @@ body{
 #mobile{
     display: none;
 }
+
+
+#mobileInner,
+#mobile{
+    border: none;
+    padding: 6px 8px;
+    color: var(--warm-yellow);
+    border-radius: 3px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid var(--warm-yellow);
+    
+
+}
+
 
 @media  (width <= 765px) {
     #mobile{
@@ -117,7 +133,7 @@ body{
     top: 50%;
     width: 100%;
     z-index: 1;
-    
+    transform: translateY(-50%);
 }
 
 .hero-section  #cards-wrapper{

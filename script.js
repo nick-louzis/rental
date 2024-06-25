@@ -29,9 +29,9 @@ document.addEventListener('DOMContentLoaded',function(){
         navlinks.style.left='100%';
      })
 
-    // const menuButton = document.getElementById('mobile');
-    // menuButton.addEventListener('click',function(){
-    //     navlinks.style.left='-100%';
-    //  })
+    const menuButton = document.getElementById('mobile');
+    menuButton.addEventListener('click',function(){
+        navlinks.style.left='0px';
+     })
 
 })

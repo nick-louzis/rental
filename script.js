@@ -75,8 +75,8 @@ document.addEventListener('DOMContentLoaded',function(){
     });
 
 
-    
-    const discoverText = document.querySelector('#discoverParagraph');
+    try{
+        const discoverText = document.querySelector('#discoverParagraph');
 
     function handleIntersection(entries) {
         entries.map((entry) => {
@@ -91,6 +91,10 @@ document.addEventListener('DOMContentLoaded',function(){
       const observer = new IntersectionObserver(handleIntersection);
 
       observer.observe(discoverText);
+    }
+    catch(e){
+        return null;
+    }
 
 
       document.querySelectorAll('.flip-card-inner').forEach(card => {

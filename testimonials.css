@@ -135,6 +135,7 @@
 .faq {
     background-color: var(--light-bg);
     text-align: center;
+    padding: 30px 0;
 }
 
 .faq-item {

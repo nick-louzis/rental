@@ -18,8 +18,22 @@
     z-index: 10;
     background: var(--light-bg);
     border-bottom: 1px solid var(--light-gray);
-    opacity: .9;
+    opacity: .95;
 }
+#headerInner{
+    height: 60px;
+    display: contents;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#company{
+    padding-left: 20px;
+    font-size: 24px;
+}
+
 
 #mobile {
     display: none;

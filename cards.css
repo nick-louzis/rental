@@ -16,9 +16,8 @@
     align-items: center;
     justify-content: center;
     column-gap: 0px;
-    opacity: 0;
+    opacity: 1;
     transition: all .5s;
-    transform: translateY(200px)
 }
 
 #cards-wrapper .card{
@@ -178,6 +177,16 @@ position: absolute;
 
 #cards-wrapper .card{
     margin: 20px 0;
+
+}
+
+.flip-card{
+  width: 250px;
+}
+
+.flip-card-back{
+  padding: 10px 20px;
+  font-size: 14px;
 }
 
   }

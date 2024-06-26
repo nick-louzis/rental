@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="cards.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="testimonials.css">
 </head>
 <body>
     <custom-header></custom-header>
@@ -166,16 +167,84 @@
 
   <!-- Customer Testimonials -->
   <section class="testimonials">
-      <h2>What Our Customers Say</h2>
-      <div class="testimonial-item">
-          <p>"Fantastic experience! The bike was in great condition and the service was excellent."</p>
-          <p>- John Doe</p>
-      </div>
-      <div class="testimonial-item">
-          <p>"Highly recommend! Affordable prices and friendly staff."</p>
-          <p>- Jane Smith</p>
-      </div>
-  </section>
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-carousel">
+        <div class="testimonial-item activate">
+            <p>"Fantastic experience! The bike was in great condition and the service was excellent."</p>
+            <p>- John Doe</p>
+        </div>
+        <div class="testimonial-item">
+            <p>"Highly recommend! Affordable prices and friendly staff."</p>
+            <p>- Jane Smith</p>
+        </div>
+        <div class="testimonial-item">
+            <p>"The best rental experience I've ever had. Will definitely come back!"</p>
+            <p>- Alice Johnson</p>
+        </div>
+        <div class="testimonial-item">
+            <p>"Great selection of bikes and excellent customer service."</p>
+            <p>- Bob Brown</p>
+        </div>
+        <div class="testimonial-item">
+            <p>"Super easy process and the bike was fantastic!"</p>
+            <p>- Carol White</p>
+        </div>
+    </div>
+</section>
+<section class="cta">
+  <h2>Ready to Ride?</h2>
+  <p>Book your motorbike today and enjoy an unforgettable adventure!</p>
+  <button onclick="window.location.href='booking.html'">Book Now</button>
+</section>
+
+<!-- Contact Form -->
+<section class="contact">
+  <h2>Contact Us</h2>
+  <form id="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      
+      <button type="submit">Send Message</button>
+  </form>
+</section>
+<div id="modal" class="modal">
+  <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Submission Complete</h2>
+      <p>✔ Your message has been sent successfully!</p>
+  </div>
+</div>
+
+<!-- Map and Location -->
+<section class="location">
+  <h2>Our Location</h2>
+  <p>123 Bike Lane, Moto City, MC 56789</p>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019812536711!2d-122.42067978468104!3d37.77492957975921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c2b85b91d%3A0x8f2e6fdbd64b9e17!2sMotoBike%20Rentals!5e0!3m2!1sen!2sus!4v1618843207311!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<!-- FAQ --> 
+<section class="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+      <h3>How do I rent a motorbike?</h3>
+      <p>You can rent a motorbike by visiting our booking page and selecting your preferred bike and rental dates.</p>
+  </div>
+  <div class="faq-item">
+      <h3>What documents do I need?</h3>
+      <p>You will need a valid driver's license and a credit card for the deposit.</p>
+  </div>
+  <div class="faq-item">
+      <h3>Are there any age restrictions?</h3>
+      <p>Yes, you must be at least 21 years old to rent a motorbike.</p>
+  </div>
+</section>
+
 
 
 

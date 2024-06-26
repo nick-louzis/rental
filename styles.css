@@ -48,3 +48,14 @@ body{
     opacity: 1 !important;
     transform: translateY(0) !important;
 }
+
+
+
+.transparent{
+  background: transparent !important;
+  backdrop-filter: blur(6px);
+}
+
+/* .nonTransparent{
+  background: ;
+} */

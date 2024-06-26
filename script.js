@@ -75,24 +75,62 @@ document.addEventListener('DOMContentLoaded',function(){
     });
 
 
+    const header = document.getElementById('header');
+
+
+    function instersector(className,isIntersecting, entryElemnt){
+      
+                if (isIntersecting){
+                    entry.target.style.background = "transparent !important";
+                    entry.target.style.backdropFilter="blur(6px)";
+                } else{
+                    entry.target.style.background = "background: var(--light-bg);"
+                }    
+                
+                // if (isIntersecting){
+                //     entryElemnt.classList.add('visible');
+                   
+                // } else{
+                //     classList.remove('visible');
+                // } 
+        }
+    
+
+
     try{
         const discoverText = document.querySelector('#discoverParagraph');
 
+        const video = document.querySelector('.video-cnt');
+        const nav = document.querySelector('#header');
+
     function handleIntersection(entries) {
         entries.map((entry) => {
+           
           if (entry.isIntersecting) {
-            console.log(entry
-                );
-            entry.target.classList.add('visible')
+            header.classList.add('transparent');
+            console.log();
+            // entry.target.classList.add('visible')
+          
+
           } else {
-            entry.target.classList.remove('visible')
+            // console.log(entry,'NotIntersecting');
+
+            header.classList.remove('transparent');
+        
+            // entry.target.classList.remove('visible')
+            
           }
+
+        
+
+
         });
       }
 
       const observer = new IntersectionObserver(handleIntersection);
 
-      observer.observe(discoverText);
+    //   observer.observe(discoverText);
+    observer.observe(video);
     }
     catch(e){
         return null;

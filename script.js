@@ -5,9 +5,11 @@ class CustomHeader extends HTMLElement{
             <div><img src="" alt=""></div>
             <nav id="nav">
                 <ul id="navlinks">
-                    <li><a href="Services.html">Services</a> </li>
-                    <li><a href="About.html">About</a></li>
+                    <li><a href="/Rental">Home</a> </li>
+                    <li><a href="Sercives.html">Services</a> </li>
                     <li><a href="Fleet.html">Fleet</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="About.html">About</a></li>
                     <button id="mobileInner">X</button>
                 </ul>
             </nav>
@@ -17,7 +19,46 @@ class CustomHeader extends HTMLElement{
     }
 }
 
+
+
+class CustomFooter extends HTMLElement{
+    connectedCallback(){
+        this.innerHTML=`<footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@motobikerentals.com</p>
+                <p>Phone: +123 456 7890</p>
+                <p>Address: 123 Bike Lane, Moto City, MC 56789</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Bikes</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MotoBike Rentals. All rights reserved.</p>
+        </div>
+    </footer>`
+    }
+}
+
 customElements.define("custom-header",CustomHeader)
+customElements.define("custom-footer",CustomFooter)
 
 
 document.addEventListener('DOMContentLoaded',function(){

@@ -4,6 +4,7 @@
     --warm-yellow: #eec201;
     --lemon-yellow: #fae12c;
     --light-gray:#969a9d;
+    --light-bg: #f7f7f7;
 }
 
 #header {
@@ -15,7 +16,9 @@
     width: 100%;
     top: 0;
     z-index: 10;
-    background: white;
+    background: var(--light-bg);
+    border-bottom: 1px solid var(--light-gray);
+    opacity: .9;
 }
 
 #mobile {

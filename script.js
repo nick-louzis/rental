@@ -81,6 +81,8 @@ document.addEventListener('DOMContentLoaded',function(){
     function handleIntersection(entries) {
         entries.map((entry) => {
           if (entry.isIntersecting) {
+            console.log(entry
+                );
             entry.target.classList.add('visible')
           } else {
             entry.target.classList.remove('visible')

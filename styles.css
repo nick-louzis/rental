@@ -138,7 +138,7 @@ body{
   top:-3px;
   background: white;
   transform: translateX(-50%);
-  animation: custom-rotateLine 1s ease-in forwards ;
+  animation: custom-rotateLine 1s ease-in-out forwards ;
 }
 
 

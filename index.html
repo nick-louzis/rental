@@ -83,7 +83,7 @@
               </div>
   
               <div class="form-group full-width">
-                  <button type="submit" class="book-now">Book Now</button>
+                  <button type="submit" class="book-now" id="openBookModal">Book Now</button>
               </div>
           </form>
       </div>
@@ -186,6 +186,8 @@
         </div>
     </section>
 
+    
+
     <section class="features">
       <h2>Why Choose Us?</h2>
       <div class="feature-item">
@@ -250,13 +252,13 @@
       <button type="submit">Send Message</button>
   </form>
 </section>
-<div id="modal" class="modal">
+<!-- <div id="modal" class="modal">
   <div class="modal-content">
       <span class="close-button">&times;</span>
       <h2>Submission Complete</h2>
       <p>✔ Your message has been sent successfully!</p>
   </div>
-</div>
+</div> -->
 
 <!-- Map and Location -->
 <section class="location">
@@ -281,6 +283,18 @@
       <p>Yes, you must be at least 21 years old to rent a motorbike.</p>
   </div>
 </section>
+<div id="bookModal" class="custom-modal">
+    <div class="custom-modal-content">
+        <span class="custom-close-button">&times;</span>
+        <h2>Booking Confirmed</h2>
+        <div class="custom-animation-container">
+            <div class="custom-circle">
+                <div class="custom-checkmark"></div>
+            </div>
+        </div>
+        <p>Your booking has been successfully completed!</p>
+    </div>
+</div>
 
 
 

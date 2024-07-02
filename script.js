@@ -5,7 +5,7 @@ class CustomHeader extends HTMLElement{
             <div><img src="" alt=""></div>
             <nav id="nav">
                 <ul id="navlinks">
-                    <li><a class="nav-link" href="/Rental/#">Home</a> </li>
+                    <li><a class="nav-link" href="#">Home</a> </li>
                     <li><a class="nav-link" href="Sercives.html">Services</a> </li>
                     <li><a class="nav-link" href="Fleet.html">Fleet</a></li>
                     <li><a class="nav-link" href="#contact">Contact</a></li>

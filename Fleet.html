@@ -6,11 +6,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="footer.css"></head>
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="nav.css">
+    <style>
+       
+        section{
+            margin-top: 100px;
+            padding: 20px 50px;
+        }
+        h1 {
+            margin: 20px 0;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .gallery-item {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: calc(33.333% - 20px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+        }
+        .gallery-item .info {
+            padding: 15px;
+            text-align: center;
+        }
+        .gallery-item .info h2 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .gallery-item .info p {
+            margin: 0;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            .gallery-item {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
 <body>
     <custom-header></custom-header>
-    <section></section>
+    <section>
+        <h1>Our Fleet</h1>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="/assets/Yamaha_tracer_900GT-1-300x225.avif" alt="Yamaha Tracer 900GT">
+                <div class="info">
+                    <h2>Yamaha Tracer 900GT</h2>
+                    <p>A versatile and powerful sports tourer with advanced electronics and a comfortable ride.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/ATV-250cc.avif" alt="ATV 250cc">
+                <div class="info">
+                    <h2>ATV 250cc</h2>
+                    <p>A robust and reliable ATV perfect for off-road adventures and rugged terrain.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/ATV-300cc.avif" alt="ATV 300cc">
+                <div class="info">
+                    <h2>ATV 300cc</h2>
+                    <p>A powerful ATV designed for extreme conditions, offering excellent performance and durability.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/Cforce-450cc.avif" alt="Cforce 450cc">
+                <div class="info">
+                    <h2>Cforce 450cc</h2>
+                    <p>A compact and efficient ATV with superior handling and advanced features.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/yamaha-tenere-700.avif" alt="Motorcycle 1">
+                <div class="info">
+                    <h2>Yamaha Tenere 700</h2>
+                    <p>An urban commuter bike with sleek design and efficient performance.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/transalp_750.avif" alt="Motorcycle 2">
+                <div class="info">
+                    <h2>Motorcycle 2</h2>
+                    <p>A touring bike with comfort and endurance for long-distance rides.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/yamaha_xt600.avif" alt="Motorcycle 3">
+                <div class="info">
+                    <h2>Yamaha XT600</h2>
+                    <p>A sports bike with high performance and advanced engineering.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/XCITINGS400i .avif" alt="Motorcycle 4">
+                <div class="info">
+                    <h2>XCITIN GS 400i</h2>
+                    <p>A classic cruiser with timeless design and smooth ride.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/AGILITYS200i.avif" alt="Motorcycle 5">
+                <div class="info">
+                    <h2>AGILITY S200i</h2>
+                    <p>An adventure bike built for exploration and off-road capabilities.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/agility.avif" alt="Motorcycle 6">
+                <div class="info">
+                    <h2>Scooter Kymco AGILITY</h2>
+                    <p>A dual-sport bike offering the best of both on-road and off-road experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <custom-footer></custom-footer>
     <script src="script.js"></script>
 </body>

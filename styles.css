@@ -176,3 +176,34 @@ body{
 #openBookModal:hover {
   background-color: var(--lemon-yellow);
 }
+
+
+
+.seeFleetButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--lemon-yellow);
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  transition: all .2s;
+
+}
+.seeFleetButton svg {
+  margin-left: 10px;
+  width: 16px;
+  height: 16px;
+  fill: white;
+}
+
+.seeFleetButton:hover{
+  border: solid 1px var(--black);
+  color: var(--black);
+}

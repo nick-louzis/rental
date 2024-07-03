@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded',function(){
     const header = document.getElementById('header');
 
     var links = document.querySelectorAll('.nav-link');
-    console.log(links)
+    // console.log(links)
     function instersector(){
         links.forEach((link) => {
             link.setAttribute('style', `color:#eec201;

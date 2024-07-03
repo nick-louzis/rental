@@ -51,7 +51,7 @@ export const motoData = [
         imgSrc: "assets/AGILITYS200i.avif",
         alt: "Motorcycle 5",
         name: "AGILITY S200i",
-        description: "An adventure bike built for exploration and off-road capabilities."
+        description: "An adventure scooter with exploration capabilities."
     },
     {
         imgSrc: "assets/agility.avif",

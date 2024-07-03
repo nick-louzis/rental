@@ -12,14 +12,14 @@ async function displayMotoData() {
         if (data){
             gallery.innerHTML = data.map(item => `
             <div class="gallery-item">
-                <img src="${item.imgSrc}" alt="${item.alt}">
+                <img src="${item.imgSrc || item.name}" alt="${item.alt}">
                 <div class="info">
                     <h2>${item.name}</h2>
                     <p>${item.description}</p>
                 </div>
             </div>
         `).join('');
-        modal.style.display="none";
+        // modal.style.display="none";
         }else{
             console.log('hello');
         }

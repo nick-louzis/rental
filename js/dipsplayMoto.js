@@ -19,7 +19,7 @@ async function displayMotoData() {
                 </div>
             </div>
         `).join('');
-        // modal.style.display="none";
+        modal.style.display="none";
         }else{
             console.log('hello');
         }

@@ -2,7 +2,7 @@ class CustomHeader extends HTMLElement{
     connectedCallback(){
         this.innerHTML=`<header>
         <div id="header">
-            <div><img src="" alt=""></div>
+            <div style="margin-left: 10%;"><span></span></div>
             <nav id="nav">
                 <ul id="navlinks">
                     <li><a class="nav-link" href="index.html">Home</a> </li>

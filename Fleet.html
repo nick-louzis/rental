@@ -25,7 +25,40 @@
             <!-- Fleet Async -->
         </div>
         <div class="fleet-modal"><span class="loader"></span></div>
-        <div class="moto-modal"><span id="toogle-fleet-modal">x</span> <div class="moto-modal-inner-wrapper"></div></div>
+        <div class="moto-modal">
+            <span id="toogle-fleet-modal">x</span> 
+            <div class="moto-modal-inner-wrapper"></div>
+            <div class="booking-outer-cnt">
+                <form action="" class="modal-book">
+                    <div class="booking-inner-cnt">
+                        <h2>Book Your Moto</h2>
+                        <div class="start-date-cnt">
+                            <label>From:</label>
+                            <input type="date" name="Start-Date" id="end-date">
+                        </div>
+                        <div class="end-date-cnt">
+                            <label>To:</label>
+                            <input type="date" name="End-Date" id="start-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Your Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="email">Your Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="phone">Your Phone:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="modal-submit">Submit</button>
+                </form>
+            </div>
+        </div>
     </section>
     <custom-footer></custom-footer>
     <script src="script.js"></script>

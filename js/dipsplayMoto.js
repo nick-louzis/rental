@@ -59,9 +59,6 @@ async function makeModalInfo(motoName){
 
 
 
-
-
-
 document.addEventListener('DOMContentLoaded', function(){
     const fleetModalTooger = document.querySelector('#toogle-fleet-modal');
     const motoModal = document.querySelector('.moto-modal')
@@ -75,8 +72,8 @@ document.addEventListener('DOMContentLoaded', function(){
             moto.addEventListener('click', async function(e) {
                 const motoName = this.children[1].firstElementChild.innerText;
                 modal.style.display='flex';
-                const actualMoto = await makeModalInfo(motoName);
                 
+                const actualMoto = await makeModalInfo(motoName);
                 
                 if (actualMoto) {
                     let motoInfo = `
@@ -86,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function(){
                                 <h2>${actualMoto.name}</h2>
                                 <p>${actualMoto.description}</p>
                                 <p>Price: ${actualMoto.price}</p>
-                                <p>Availability: ${actualMoto.availabilityText}</p>
+                                <p>Availability: ${actualMoto.availability}</p>
                                 <p>Features: ${actualMoto.features.join(', ')}</p>
                                 <p>Rating: ${actualMoto.rating}</p>
                                 <p>License Required: ${actualMoto.licenseRequired}</p>

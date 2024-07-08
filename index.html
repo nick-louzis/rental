@@ -5,37 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rentit</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="video.css">
-    <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="cards.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="booking.css">
-    <link rel="stylesheet" href="testimonials.css">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/video.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/booking.css">
+    <link rel="stylesheet" href="css/testimonials.css">
+    <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
     <custom-header></custom-header>
-    <!-- <header>
-        <div id="header">
-            <div id="headerInner"><h3 id="company">Rentit</h3>
-            <nav id="nav">
-                <ul id="navlinks">
-                    <li><a href="/Rental">Home</a> </li>
-                    <li><a href="Sercives.html">Services</a> </li>
-                    <li><a href="Fleet.html">Fleet</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="About.html">About</a></li>
-                    <button id="mobileInner">X</button>
-                </ul>
-            </nav>
-            <button id="mobile">Menu</button>
-        </div>
-    </header> -->
     
     <section class="hero-section">
         <div class="first-section-text">
-            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/6v4jN3V2j5M?si=XZbJsOadvoJ8a2q8" title="YouTube video player" autoplay="true" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
             <div class="video-cnt">
                 <video src="yamaha.webm" type="video/webm" autoplay muted loop></video>
             </div>
@@ -83,7 +66,7 @@
               </div>
   
               <div class="form-group full-width">
-                  <button type="submit" class="book-now">Book Now</button>
+                  <button type="submit" class="book-now" id="openBookModal">Book Now</button>
               </div>
           </form>
       </div>
@@ -180,11 +163,18 @@
       
         </div>
 
-
+        <a href="Fleet.html" class="seeFleetButton">
+            See our fleet
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15l-5-5 5-5v10z"/>
+            </svg>
+        </a>
         <div id="discover">
             <p id="discoverParagraph" >Discover our diverse selection of top-quality bikes and cars, meticulously maintained to ensure a smooth and enjoyable ride every time. From sporty bikes to luxurious cars, we have something for everyone.</p>
         </div>
     </section>
+
+    
 
     <section class="features">
       <h2>Why Choose Us?</h2>
@@ -250,13 +240,13 @@
       <button type="submit">Send Message</button>
   </form>
 </section>
-<div id="modal" class="modal">
+<!-- <div id="modal" class="modal">
   <div class="modal-content">
       <span class="close-button">&times;</span>
       <h2>Submission Complete</h2>
       <p>✔ Your message has been sent successfully!</p>
   </div>
-</div>
+</div> -->
 
 <!-- Map and Location -->
 <section class="location">
@@ -281,6 +271,18 @@
       <p>Yes, you must be at least 21 years old to rent a motorbike.</p>
   </div>
 </section>
+<div id="bookModal" class="custom-modal">
+    <div class="custom-modal-content">
+        <span class="custom-close-button">&times;</span>
+        <h2>Booking Confirmed</h2>
+        <div class="custom-animation-container">
+            <div class="custom-circle">
+                <div class="custom-checkmark"></div>
+            </div>
+        </div>
+        <p>Your booking has been successfully completed!</p>
+    </div>
+</div>
 
 
 
@@ -290,7 +292,7 @@
     </custom-footer>
 
     <script src="script.js"></script>
-    <script src="scramble.js"></script>
+    <script src="js/scramble.js"></script>
    
 </body>
    </html>

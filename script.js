@@ -2,14 +2,14 @@ class CustomHeader extends HTMLElement{
     connectedCallback(){
         this.innerHTML=`<header>
         <div id="header">
-            <div><img src="" alt=""></div>
+            <div style="margin-left: 10%;"><span></span></div>
             <nav id="nav">
                 <ul id="navlinks">
-                    <li><a href="/Rental">Home</a> </li>
-                    <li><a href="Sercives.html">Services</a> </li>
-                    <li><a href="Fleet.html">Fleet</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="About.html">About</a></li>
+                    <li><a class="nav-link" href="index.html">Home</a> </li>
+                    <li><a class="nav-link" href="Sercives.html">Services</a> </li>
+                    <li><a class="nav-link" href="Fleet.html">Fleet</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
+                    <li><a class="nav-link" href="About.html">About</a></li>
                     <button id="mobileInner">X</button>
                 </ul>
             </nav>
@@ -77,23 +77,21 @@ document.addEventListener('DOMContentLoaded',function(){
 
     const header = document.getElementById('header');
 
+    var links = document.querySelectorAll('.nav-link');
+    // console.log(links)
+    function instersector(){
+        links.forEach((link) => {
+            link.setAttribute('style', `color:#eec201;
+                                        padding:2px 5px; border-radius:5px; flex-grow:1`);
+        });  
+    }
 
-    function instersector(className,isIntersecting, entryElemnt){
-      
-                if (isIntersecting){
-                    entry.target.style.background = "transparent !important";
-                    entry.target.style.backdropFilter="blur(6px)";
-                } else{
-                    entry.target.style.background = "background: var(--light-bg);"
-                }    
-                
-                // if (isIntersecting){
-                //     entryElemnt.classList.add('visible');
-                   
-                // } else{
-                //     classList.remove('visible');
-                // } 
-        }
+    function wipeInstersector(){
+        links.forEach((link) => {
+            link.setAttribute('style', `background: none;
+                                        padding:2px 5px; border-radius:0; `);
+        });  
+    }
     
 
 
@@ -108,13 +106,13 @@ document.addEventListener('DOMContentLoaded',function(){
            
           if (entry.isIntersecting) {
             header.classList.add('transparent');
-            console.log();
+            instersector();
             // entry.target.classList.add('visible')
-          
+            
 
           } else {
             // console.log(entry,'NotIntersecting');
-
+            wipeInstersector()
             header.classList.remove('transparent');
         
             // entry.target.classList.remove('visible')
@@ -178,4 +176,31 @@ document.addEventListener('DOMContentLoaded',function(){
         }
     });
 
+
+    
+
 })
+
+const modal = document.getElementById('bookModal');
+    const openModalBtn = document.getElementById('openBookModal');
+    const closeModalBtn = document.querySelector('.custom-close-button');
+    const circle = document.querySelector('.custom-circle');
+
+    openModalBtn.addEventListener('click', function() {
+        modal.style.display = 'block';
+        setTimeout(() => {
+            circle.classList.add('animate');
+        }, 1000); // Adjust timing as needed
+    });
+
+    closeModalBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+        circle.classList.remove('animate');
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+            circle.classList.remove('animate');
+        }
+    });

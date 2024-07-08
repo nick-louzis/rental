@@ -5,13 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="footer.css"></head>
-    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/fleet.css">
+    <link rel="stylesheet" href="css/moto-modal.css">
+    <style>
+       
+        
+   
+    </style>
+</head>
+
 <body>
     <custom-header></custom-header>
-    <section></section>
+    
+    <section id="fleet-section">
+        <h1>Our Fleet</h1>
+        <div class="gallery">
+            <!-- Fleet Async -->
+        </div>
+        <div class="fleet-modal"><span class="loader"></span></div>
+        <div class="moto-modal">
+            <span id="toogle-fleet-modal">x</span> 
+            <div class="moto-modal-inner-wrapper"></div>
+            <div class="booking-outer-cnt">
+                <form action="" class="modal-book">
+                    <div class="booking-inner-cnt">
+                        <h2>Book Your Moto</h2>
+                        <div class="start-date-cnt">
+                            <label>From:</label>
+                            <input type="date" name="Start-Date" id="end-date">
+                        </div>
+                        <div class="end-date-cnt">
+                            <label>To:</label>
+                            <input type="date" name="End-Date" id="start-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Your Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="email">Your Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="phone">Your Phone:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="modal-submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <img src="assets/logo.webp" alt=""></div>
     <custom-footer></custom-footer>
     <script src="script.js"></script>
+    <script type="module" src="js/dipsplayMoto.js"></script>
 </body>
 </html>

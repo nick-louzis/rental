@@ -54,5 +54,12 @@
     left: 0;
   }
 
-
+@media(width<= 768px)
+{
+  #hook{
+  
+    font-size: 30px;
+    margin: auto;
+  }
+}
   

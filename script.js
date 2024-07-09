@@ -2,7 +2,8 @@ class CustomHeader extends HTMLElement{
     connectedCallback(){
         this.innerHTML=`<header>
         <div id="header">
-            <div style="margin-left: 10%;"><span></span></div>
+            <div style="margin-left: 10%;">
+                <a href=""><span></span></div></a>
             <nav id="nav">
                 <ul id="navlinks">
                     <li><a class="nav-link" href="index.html">Home</a> </li>

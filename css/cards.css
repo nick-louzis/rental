@@ -62,8 +62,17 @@
   }
   
   .flip-card-front {
-    background-color: #bbb;
     color: black;
+  }
+
+  .flip-card-inner .card-price{
+    position: absolute;
+    bottom: 35px;
+    left: 10px;
+    font-size: 14px;
+    padding: 3px 5px;
+    border: 1px solid black;
+    border-radius: 5px;
   }
   
   .flip-card-back {
@@ -106,9 +115,12 @@
     width: 100%;
     height: 100%;
     border: none;
-    object-fit: cover;
+    object-fit: contain;
 }
-
+.flip-card-front h3{
+  padding: 2px 0;
+  background: #bbb;
+}
 
 .card-content{
 position: absolute;

@@ -40,11 +40,13 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
     
 }
 .gallery-item img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: 90%;
+  object-fit: contain;
 }
 .gallery-item .info {
     padding: 15px;

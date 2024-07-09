@@ -22,6 +22,15 @@
     
     <section id="fleet-section">
         <h1>Our Fleet</h1>
+        <div>
+            <h3>Sort By:</h3>
+            <select name="filter" id="filter">
+                <option value="rating">Rating</option>
+                <option value="name">Name</option>
+                <option value="price">Price</option>
+            </select>
+        </div>
+        
         <div class="gallery">
             <!-- Fleet Async -->
         </div>
@@ -65,6 +74,11 @@
     <img src="assets/logo.webp" alt=""></div>
     <custom-footer></custom-footer>
     <script src="script.js"></script>
+    <script>
+        function selcet(e){
+            console.log(e.target);
+        }
+    </script>
     <script type="module" src="js/dipsplayMoto.js"></script>
 </body>
 </html>

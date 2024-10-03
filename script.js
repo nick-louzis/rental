@@ -109,20 +109,12 @@ document.addEventListener('DOMContentLoaded',function(){
             header.classList.add('transparent');
             instersector();
             // entry.target.classList.add('visible')
-            
-
           } else {
             // console.log(entry,'NotIntersecting');
             wipeInstersector()
             header.classList.remove('transparent');
-        
-            // entry.target.classList.remove('visible')
-            
+            // entry.target.classList.remove('visible')           
           }
-
-        
-
-
         });
       }
 
@@ -167,9 +159,12 @@ document.addEventListener('DOMContentLoaded',function(){
         modal.style.display = 'block';
     });
 
-    closeButton.addEventListener('click', function() {
-        modal.style.display = 'none';
-    });
+    if(closeButton){
+        closeButton.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+    }
+    
 
     window.addEventListener('click', function(event) {
         if (event.target === modal) {
@@ -191,7 +186,7 @@ const modal = document.getElementById('bookModal');
         modal.style.display = 'block';
         setTimeout(() => {
             circle.classList.add('animate');
-        }, 1000); // Adjust timing as needed
+        }, 1000); 
     });
 
     closeModalBtn.addEventListener('click', function() {

@@ -3,6 +3,35 @@ import { motoData } from "./motoData.js";
 
 
 
+
+const motoCard = (item) => `
+<div class="gallery-item">
+    <img src="${item.imgSrc || item.name}" alt="${item.alt}">
+    <div class="info">
+        <h2>${item.name}</h2>
+        <p>${item.description}</p>
+        <div class="rent-button-cnt">
+            <span>${item.price}€ / Day</span>
+            <button class="open-modal">See Details</button>
+        </div>
+    </div>
+</div>
+` ;
+
+const motoInfo = (info)=>  `
+<div id="modal-inner-cnt">
+    <div id="modal-img-cnt"><img src="${info.imgSrc}" alt="${info.alt}"></div>
+    <div id="modal-details-cnt">
+        <h2>${info.name}</h2>
+        <p>${info.description}</p>
+        <p>Price: ${info.price}</p>
+        <p>Availability: ${info.availability}</p>
+        <p>Features: ${info.features.join(', ')}</p>
+        <p>Rating: ${info.rating}</p>
+        <p>License Required: ${info.licenseRequired}</p>
+    </div>
+</div>`;
+
 async function displayMotoData() {
     try {
         const data = await fetchMotoData();
@@ -10,15 +39,7 @@ async function displayMotoData() {
         const gallery = document.querySelector('.gallery');
         
         if (data){
-            gallery.innerHTML = data.map(item => `
-            <div class="gallery-item">
-                <img src="${item.imgSrc || item.name}" alt="${item.alt}">
-                <div class="info">
-                    <h2>${item.name}</h2>
-                    <p>${item.description}</p>
-                </div>
-            </div>
-        `).join('');
+            gallery.innerHTML = data.map(item =>motoCard(item)).join('');
         modal.style.display="none";
         }
     } catch (error) {
@@ -31,7 +52,7 @@ async function displayMotoData() {
 async function makeModalInfo(motoName){
     try{
         const data = await fetchMotoData();
-        const moto  = data.find(moto => moto.name === motoName)
+        const moto  = data.find(moto => moto.name === motoName);
         if (moto) {
             return moto;
         } else {
@@ -49,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const fleetModalTooger = document.querySelector('#toogle-fleet-modal');
     const motoModal = document.querySelector('.moto-modal')
     const modal = document.querySelector('.fleet-modal');
-    console.log(modal);
+    
     displayMotoData().then(() => {
         const motos = document.querySelectorAll('.gallery-item');
         // console.log(motos);
@@ -62,23 +83,8 @@ document.addEventListener('DOMContentLoaded', function(){
                 const actualMoto = await makeModalInfo(motoName);
                 
                 if (actualMoto) {
-                    let motoInfo = `
-                        <div id="modal-inner-cnt">
-                            <div id="modal-img-cnt"><img src="${actualMoto.imgSrc}" alt="${actualMoto.alt}"></div>
-                            <div id="modal-details-cnt">
-                                <h2>${actualMoto.name}</h2>
-                                <p>${actualMoto.description}</p>
-                                <p>Price: ${actualMoto.price}</p>
-                                <p>Availability: ${actualMoto.availability}</p>
-                                <p>Features: ${actualMoto.features.join(', ')}</p>
-                                <p>Rating: ${actualMoto.rating}</p>
-                                <p>License Required: ${actualMoto.licenseRequired}</p>
-                            </div>
-                        </div>`;
-                    
-                    
                     const motoModalcnt = document.querySelector('.moto-modal-inner-wrapper');
-                    motoModalcnt.innerHTML = motoInfo;
+                    motoModalcnt.innerHTML = motoInfo(actualMoto);
                     motoModal.style.display = 'block';
                     modal.style.display='none'
                 }
@@ -119,15 +125,7 @@ document.addEventListener('DOMContentLoaded', function(){
         const gallery = document.querySelector('.gallery');
         gallery.innerHTML='';
         if (data){
-            gallery.innerHTML = data.map(item => `
-            <div class="gallery-item">
-                <img src="${item.imgSrc || item.name}" alt="${item.alt}">
-                <div class="info">
-                    <h2>${item.name}</h2>
-                    <p>${item.description}</p>
-                </div>
-            </div>
-        `).join('');
+            gallery.innerHTML = data.map(item => motoCard(item)).join('');
         modal.style.display="none";
        
         }else{
@@ -143,23 +141,8 @@ document.addEventListener('DOMContentLoaded', function(){
                 const actualMoto = await makeModalInfo(motoName);
                 
                 if (actualMoto) {
-                    let motoInfo = `
-                        <div id="modal-inner-cnt">
-                            <div id="modal-img-cnt"><img src="${actualMoto.imgSrc}" alt="${actualMoto.alt}"></div>
-                            <div id="modal-details-cnt">
-                                <h2>${actualMoto.name}</h2>
-                                <p>${actualMoto.description}</p>
-                                <p>Price: ${actualMoto.price}</p>
-                                <p>Availability: ${actualMoto.availability}</p>
-                                <p>Features: ${actualMoto.features.join(', ')}</p>
-                                <p>Rating: ${actualMoto.rating}</p>
-                                <p>License Required: ${actualMoto.licenseRequired}</p>
-                            </div>
-                        </div>`;
-                    
-                    
                     const motoModalcnt = document.querySelector('.moto-modal-inner-wrapper');
-                    motoModalcnt.innerHTML = motoInfo;
+                    motoModalcnt.innerHTML = motoInfo(actualMoto);
                     motoModal.style.display = 'block';
                     modal.style.display='none'
                 }

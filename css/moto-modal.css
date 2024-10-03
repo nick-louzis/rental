@@ -49,12 +49,18 @@ body::-webkit-scrollbar {
 #modal-inner-cnt{
     width: 100%;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    height: 400px;
 }
 
 #modal-img-cnt img{
-    width: 100%;
+    /* width: 100%; */
     border-radius: 10px;
     margin: 20px 0;
+    height: 100%;
+    object-fit: contain;
 }
 
 #modal-details-cnt h2{
@@ -69,12 +75,12 @@ body::-webkit-scrollbar {
 
 @media (width>500px){
     
-#modal-inner-cnt{
+/* #modal-inner-cnt{
     width: 60%;
     margin: auto;
-    }
+    } */
 }
-@media (width>1100px){
+@media (width<1100px){
     #modal-img-cnt{
         text-align: center;
     }
